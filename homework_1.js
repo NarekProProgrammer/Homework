@@ -9,7 +9,7 @@ if(inputNum < 10) {
     res /= 10;
     res = inputNum % 10 + '' + res;
 } else {
-    res = '0' + inputNum / 10;
+    res = inputNum;
 }
 
 // console.log(res);
