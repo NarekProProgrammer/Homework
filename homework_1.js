@@ -90,27 +90,20 @@ else
 console.log(res);
 
 // 5) values to keys
-// with arrays
-let obj = { a: '1', b: '2', c: '2' };
+let obj = { a: '1', b: '2', c: '2', d: '2' };
 let newObj = {};
 
 for(key in obj) {
     if(newObj.hasOwnProperty(obj[key])) {
-        newObj[obj[key]] = [newObj[obj[key]]];
         newObj[obj[key]].push(key);
     } else {
-    newObj[obj[key]] = key;
+        newObj[obj[key]] = [key];
     }
 }
-
-console.log(newObj);
-
-// without arrays
-let obj = { a: '1', b: '2'};
-let newObj = {};
-
-for(key in obj) {
-    newObj[obj[key]] = key;
+for(newKey in newObj) {
+    if(newObj[newKey].length == 1) {
+        newObj[newKey] = newObj[newKey][0];
+    }
 }
 
 console.log(newObj);
