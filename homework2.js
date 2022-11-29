@@ -61,17 +61,19 @@ function quotientOrRemainder(num) {
 // 5) print X star pattern series
 
 function matrix(xy) {
-  let c = "";
-  let b = xy;
+  let row = "";
+  let line2pos = xy;
   for (let i = 0; i <= xy; i++) {
-    c = "";
+    row = "";
     for (let a = 0; a <= xy; a++) {
-      if (a === i || (a === b && i !== b - 1 && i !== b + 1)) {
-        c += "*";
-      } else c += " ";
+      if (a === i || (a === line2pos && i !== line2pos - 1 && i !== line2pos + 1)) {
+        row += "*";
+      } else {
+        row += " ";
+      }
     }
-    b--;
-    console.log(c);
+    line2pos--;
+    console.log(row);
     console.log("\n");
   }
 }
