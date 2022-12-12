@@ -24,7 +24,7 @@ function findSumOfRow(arr) {
 
 //3) Given an array of integers. Write a function that return new array from first array,
 //where removed even numbers, and odd numbers was multiplied with new array length
-function removeEvens(arr) {
+function removeOdds(arr) {
   return arr.filter((el) => el % 2 === 1).map((el) => el * res2.length);
 }
 
